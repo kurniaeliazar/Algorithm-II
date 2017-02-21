@@ -19,6 +19,13 @@ Repository of C/C++ sample programs that contains file manipulations including w
 16. Day 16 - Final examination
 
 
+##Running g++
+1. run (windows+r) -> cmd
+2. g++ error: no input files
+3. extensi .cpp
+4. g++ <file.cpp> -o file => .obj .exe
+5. .exe
+
 
 
 
