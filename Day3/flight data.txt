@@ -1,0 +1,9 @@
+lion 5 surabaya
+lion 3 medan
+lion 2 palembang
+citilink 4 denpasar
+citilink 2 batam
+garuda 10 makasar
+garuda 3 surabaya
+garuda 2 denpasar
+

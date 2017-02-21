@@ -1,0 +1,11 @@
+lion 5 surabaya
+lion 3 medan
+lion 2 palembang
+00 00 00
+citilink 4 denpasar
+citilink 2 batam
+00 00 00
+garuda 10 makasar
+garuda 3 surabaya
+garuda 2 denpasar
+
