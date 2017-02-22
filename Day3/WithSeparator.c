@@ -39,9 +39,9 @@ int main (){
    		printf("jumlah penerbangan maskapai %s: %d\n", current, sum);
    		sum_all = sum_all + sum;
 
-  }while(!feof(Penerbangan));
+    }while(!feof(Penerbangan));
 
-  printf("Jumlah Seluruh Penerbangan : %d", sum_all);
+    printf("Jumlah Seluruh Penerbangan : %d", sum_all);
 
  }
  
