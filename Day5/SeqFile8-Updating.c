@@ -29,8 +29,6 @@ int main() {
 	  	strcpy(rekaman.nilai, "80");
 	  }
 
-	  //printf("%s %s %s\n", &rekaman.prodi, &rekaman.nama, &rekaman.nilai);
-
 	  fprintf(arsipMatkulUpdate, "%s %s %s\n", rekaman.prodi, rekaman.nama, 
 	  	rekaman.nilai);
 
