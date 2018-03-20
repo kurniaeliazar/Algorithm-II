@@ -1,9 +1,9 @@
 ## Algorithm-II
 Repository of C/C++ sample programs that contains file manipulations including write, read, merging, spliting, etc. 
 
-1. Day 1 - Array, function and procedur
+1. Day 1 - Array, function and procedure
 2. Day 2 - Write and Read files
-3. Day 3 - File consolidation with and withour separator
+3. Day 3 - File consolidation with and without separator
 4. Day 4 - Merging and Spliting files
 5. Day 5 - Updating files
 6. Day 6 - Non - recursif algorithm
@@ -19,7 +19,7 @@ Repository of C/C++ sample programs that contains file manipulations including w
 16. Day 16 - Final examination
 
 
-##Running g++
+## Running g++
 1. run (windows+r) -> cmd
 2. g++ error: no input files
 3. extensi .cpp
