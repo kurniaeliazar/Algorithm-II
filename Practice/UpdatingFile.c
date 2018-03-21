@@ -7,15 +7,14 @@ int main() {
 		char npm[3];
 		char nama[100];
 		float ipk;
-	}rekamanMaster, rekamanTrans ;
+	}rekamanMaster, rekamanTrans;
 
-
-	FILE *fileMaster;
-	FILE *fileTrans;
+    FILE *fileMaster;
+    FILE *fileTrans;
     FILE *fileNewMaster;
 
-	fileMaster = fopen("FileMaster.dat", "r");
-	fileNewMaster = fopen("FileNewMaster.dat", "w");
+    fileMaster = fopen("FileMaster.dat", "r");
+    fileNewMaster = fopen("FileNewMaster.dat", "w");
 
     while(!feof(fileMaster)) {
         printf("File master \n");
@@ -27,8 +26,14 @@ int main() {
         while(!feof(fileTrans)) {
             fscanf(fileTrans, "%s %s %f\n", &rekamanTrans.npm, &rekamanTrans.nama, &rekamanTrans.ipk);
             printf("%s %s %f\n", rekamanTrans.npm, rekamanTrans.nama, rekamanTrans.ipk);
-
+            
             // put the logic to update ipk value here
+            //
+            //
+            //
+            //
+            //
+            //
 
         }
 
@@ -36,7 +41,7 @@ int main() {
         fclose(fileTrans);
     }
 
-	fclose(fileMaster);
+    fclose(fileMaster);
     fclose(fileNewMaster);
 	     
 	return 0;
