@@ -15,46 +15,28 @@ int main() {
     FILE *fileNewMaster;
 
 	fileMaster = fopen("FileMaster.dat", "r");
-    fileTrans = fopen("FileTrans.dat", "r");
 	fileNewMaster = fopen("FileNewMaster.dat", "w");
 
-	fscanf(fileMaster, "%s %s %f\n", &rekamanMaster.npm, &rekamanMaster.nama, &rekamanMaster.ipk);
-    fscanf(fileTrans, "%s %s %f\n", &rekamanTrans.npm, &rekamanTrans.nama, &rekamanTrans.ipk);
-
-    printf("File master \n");
-    do {
-        printf("%s %s %f\n", rekamanMaster.npm, rekamanMaster.nama, rekamanMaster.ipk);
-        printf("File Trans \n");
-        do {
-            printf("%s - %s - %d\n", rekamanMaster.npm, rekamanTrans.npm, strcmp(rekamanMaster.npm, rekamanTrans.npm));
-            if(strcmp(rekamanMaster.npm, rekamanTrans.npm) > 0){
-                printf("%s %s %f\n", rekamanTrans.npm, rekamanTrans.nama, rekamanTrans.ipk);
-            }
-            fscanf(fileTrans, "%s %s %f\n", &rekamanTrans.npm, &rekamanTrans.nama, &rekamanTrans.ipk);
-        }while(!feof(fileTrans));
-        // printf("%s %s %f\n", rekamanTrans.npm, rekamanTrans.nama, rekamanTrans.ipk);
-
+    while(!feof(fileMaster)) {
+        printf("File master \n");
         fscanf(fileMaster, "%s %s %f\n", &rekamanMaster.npm, &rekamanMaster.nama, &rekamanMaster.ipk);
-    }while(!feof(fileMaster));
-    //printf("%s %s %f\n", rekamanMaster.npm, rekamanMaster.nama, rekamanMaster.ipk);
+        printf("%s %s %f\n", rekamanMaster.npm, rekamanMaster.nama, rekamanMaster.ipk);
 
-    
+        printf("File Trans \n");
+        fileTrans = fopen("FileTrans.dat", "r");
+        while(!feof(fileTrans)) {
+            fscanf(fileTrans, "%s %s %f\n", &rekamanTrans.npm, &rekamanTrans.nama, &rekamanTrans.ipk);
+            printf("%s %s %f\n", rekamanTrans.npm, rekamanTrans.nama, rekamanTrans.ipk);
 
-	// do{
-	//   if((strcmp(rekaman.prodi,"IF") == 0) && (strcmp(rekaman.nama,"ccc") == 0)){
-	//   	strcpy(rekaman.nilai, "80");
-	//   }
+            // put the logic to update ipk value here
 
-	//   fprintf(arsipMatkulUpdate, "%s %s %s\n", rekaman.prodi, rekaman.nama, 
-	//   	rekaman.nilai);
+        }
 
-	//   fscanf(arsipMatkul, "%s %s %s\n", &rekaman.prodi, 
-	// 	&rekaman.nama, &rekaman.nilai);
-	  
-	// }while(!feof(arsipMatkul));
+        fprintf(fileNewMaster, "%s %s %f\n", rekamanMaster.npm, rekamanMaster.nama, rekamanMaster.ipk);
+        fclose(fileTrans);
+    }
 
 	fclose(fileMaster);
-	fclose(fileTrans);
     fclose(fileNewMaster);
 	     
 	return 0;
